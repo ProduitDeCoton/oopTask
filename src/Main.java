@@ -33,10 +33,14 @@ public class Main {
 
     /**
      * Переехать из текущего места в заданную точку
-     * на любом, заранее определённом транспорте
+     * на заранее определённом транспорте
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
+        Transport transport = new PersonCar();
+        person.walk(transport.getPosition());
+        transport.takeTo(person, destination);
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
