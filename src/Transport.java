@@ -1,0 +1,5 @@
+/**
+ * Транспорт
+ */
+public interface Transport {
+}

@@ -20,6 +20,9 @@ public class Main {
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
+        PersonTransport transport = new PersonCar();
+        transport.takeTo(person, destination);
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
