@@ -37,9 +37,9 @@ public class Main {
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
-        Transport preferredTransport = new Tram();
-        person.walk(preferredTransport.getPosition());
-        preferredTransport.takeTo(person, destination);
+        Transport transport = new Tram();
+        person.walk(transport.getPosition());
+        transport.takeTo(person, destination);
         person.walk(destination);
 
         assert person.getPosition() == destination;
