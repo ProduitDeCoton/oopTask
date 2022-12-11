@@ -1,5 +1,2 @@
-/**
- * Транспорт
- */
 public interface Transport {
 }

@@ -1,6 +1,3 @@
-/**
- * Легковой автомобиль
- */
 public class PersonCar implements PersonTransport {
 
     /**
