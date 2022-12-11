@@ -37,10 +37,11 @@ public class Main {
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
-        Transport transport = new PersonCar();
-        person.walk(transport.getPosition());
-        transport.takeTo(person, destination);
+        Transport preferredTransport = new Tram();
+        person.walk(preferredTransport.getPosition());
+        preferredTransport.takeTo(person, destination);
         person.walk(destination);
+
         assert person.getPosition() == destination;
     }
 }

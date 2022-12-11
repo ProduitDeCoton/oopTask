@@ -1,6 +1,3 @@
-/**
- * Легковой автомобиль
- */
 public class Bus implements Transport{
     private Position position;
     /**
@@ -12,19 +9,16 @@ public class Bus implements Transport{
 
     /**
      * Установить текущее местоположение
-     *
-     * @param position
      */
     public void setPosition(Position position) {
+        this.position = position;
     }
 
     /**
-     * Довезти человека до пункта назначения. Необязательно
-     * довозить человека прямо к пункту, можно высадить в
-     * удобной для транспорта точке, близлежащей к пункту
-     * назначения.
+     * Довезти человека до пункта назначения. Можно высадить на
+     * близлежащей к пункту точке назначения
      *
-     * @param person      человек
+     * @param person человек
      * @param destination пункт назначения
      */
     public void takeTo(Person person, Position destination) {
