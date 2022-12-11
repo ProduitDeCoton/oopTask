@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * <b>Задача 2:</b><br>
  * Добраться человеку до заданного места.<br>
@@ -37,11 +40,14 @@ public class Main {
      */
     public static void moveTo(Person person, Position destination) {
         // TODO
-        Transport preferredTransport = new Tram();
-        person.walk(preferredTransport.getPosition());
-        preferredTransport.takeTo(person, destination);
+        List<Transport> transports = Arrays.asList(new Bus(), new Tram());
+        for (int i = 0; i < transports.size() - 1; i++) {
+            person.walk(transports.get(i).getPosition());
+            transports.get(i).takeTo(person, transports.get(i+1).getPosition());
+        }
+        person.walk(transports.get(transports.size() - 1).getPosition());
+        transports.get(transports.size() - 1).takeTo(person, destination);
         person.walk(destination);
-
         assert person.getPosition() == destination;
     }
 }
