@@ -4,7 +4,7 @@
 public interface PersonTransport extends Transport {
 
     /**
-     * Доставить человека к точке назначения
+     * Доставить человека до пункта назначения
      */
     public void takeTo(Person person, Position destination);
 }
