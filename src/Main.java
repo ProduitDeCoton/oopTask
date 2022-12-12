@@ -43,7 +43,7 @@ public class Main {
         List<Transport> transports = Arrays.asList(new Bus(), new Tram());
         for (int i = 0; i < transports.size() - 1; i++) {
             person.walk(transports.get(i).getPosition());
-            transports.get(i).takeTo(person, transports.get(i+1).getPosition());
+            transports.get(i).takeTo(person, transports.get(i + 1).getPosition());
         }
         person.walk(transports.get(transports.size() - 1).getPosition());
         transports.get(transports.size() - 1).takeTo(person, destination);
